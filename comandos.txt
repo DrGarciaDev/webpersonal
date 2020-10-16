@@ -1,0 +1,11 @@
+conda create -n django202_py26 python=3.6
+
+activate django202_py26
+
+pip install django==2.0.2
+
+django-admin startproject webpersonal
+
+python manage.py runserver
+
+python manage.py migrate
