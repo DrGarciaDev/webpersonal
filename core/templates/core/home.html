@@ -2,7 +2,12 @@
 
 {% block title %}Portada{% endblock %}
 
+{% block background %}{% load static %}{% static 'core/img/home-bg.jpg' %}{% endblock %}
+
+{% block headers %}
+    <h1>Luis García</h1>
+    <span class="subheading">Ingeniero Industrial</span>
+{% endblock %}
+
 {% block content %}
-<h2>Portada</h2>
-<p>Esto es la portada</p>
 {% endblock %}
