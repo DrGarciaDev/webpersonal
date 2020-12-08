@@ -12,3 +12,12 @@
 
 comando para crear nuestra primer app
     python manage.py startapp core
+
+para el manejo de imágenes:
+    pip install Pillow
+
+python manage.py startapp portfolio
+
+python manage.py makemigrations portfolio
+
+python manage.py migrate portfolio 
