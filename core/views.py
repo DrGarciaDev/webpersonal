@@ -7,14 +7,11 @@ html_base = '''
     <li><a href="/about-me">Acerca de</a></li>
     <li><a href="/portfolio">Portafolio</a></li>
     <li><a href="/contact">Contacto</a></li>
-</UL>
+</ul>
 '''
 # Create your views here.
 def home(request):
-    return HttpResponse(html_base + '''
-                                        <h2>Portada</h2>
-                                        <p>Esto es la portada</p>
-                                    ''')
+    return render(request, "core/home.html")
 
 def about(request):
     return HttpResponse(html_base + '''
