@@ -14,19 +14,11 @@ def home(request):
     return render(request, "core/home.html")
 
 def about(request):
-    return HttpResponse(html_base + '''
-                                        <h2>Acerca de</h2>
-                                        <p>Me llamo Luis y estoy aprendiendo Django</p>
-                                    ''')
+    return render(request, "core/about.html")
                                     
 def portfolio(request):
-    return HttpResponse(html_base + '''
-                                        <h2>Portafolio</h2>
-                                        <p>Esto es mi portafolio</p>
-                                    ''')
+    return render(request, "core/portfolio.html")
 
 def contact(request):
-    return HttpResponse(html_base + '''
-                                        <h2>Contacto</h2>
-                                        <p>Me llamo Luis y puedes contactarme al correo <a href="mailto:correo@correo.com">Luis garcia</a></p>
-                                    ''')
+    return render(request, "core/contact.html")
+
