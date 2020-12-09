@@ -21,3 +21,6 @@ python manage.py startapp portfolio
 python manage.py makemigrations portfolio
 
 python manage.py migrate portfolio 
+
+para crear un super usuario
+    python manage.py createsuperuser
