@@ -24,3 +24,22 @@ python manage.py migrate portfolio
 
 para crear un super usuario
     python manage.py createsuperuser
+
+Por si se pierde el password
+    python manage.py changepassword <username>
+    https://stackoverrun.com/es/q/1592710
+
+https://stackoverflow.com/questions/53637182/django-no-such-table-main-auth-user-old/54995089#54995089?newreg=6cf6ca9036b44199aa85102803a19b6c
+Para evitar errores al guardar, justamente con esta versión de django2.0.2 se necesita poner en la librería, 
+en el archivo schema.py en la ruta en mi caso: 
+C:\Anaconda3\envs\django2_py36\Lib\site-packages\django\db\backends\sqlite3
+la siguiente linea
+
+    self.connection.cursor().execute('PRAGMA legacy_alter_table = ON')
+
+borrar la base de datos db.sqlite3 de la raíz 
+y correr los siguientes comandos de nuevo
+    python manage.py makemigrations
+    python manage.py migrate
+    python manage.py createsuperuser
+    python manage.py runserver
