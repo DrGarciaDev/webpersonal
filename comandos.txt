@@ -54,3 +54,7 @@ y configurar las configuraciones de usuario como se muestra a continuación
         "--load-plugins",
         "pylint_django"
     ]
+
+para añadir enlaces a los proyectos del portafolio
+    python manage.py makemigrations portfolio 
+    python manage.py migrate portfolio 
